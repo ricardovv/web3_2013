@@ -1,0 +1,99 @@
+/** 
+* CSS
+*
+* cascade & specificity: 
+* http://reference.sitepoint.com/css/specificity
+*
+*/
+
+
+body { 
+    margin:0; padding:0;
+    padding-top:3em; 
+    }
+
+
+section { 
+    margin:1em 20px; 
+    }
+
+header h1 {
+    margin:1em 20px;
+    }
+
+
+/**
+* Navigation 
+*
+*/
+
+nav {
+	position: fixed;
+	top:0;
+    padding:.5em 20px;
+	background:#eee;
+    background:rgba(238,238,238,0.7);
+    width:100%;
+	box-shadow; 0px 5px 5px #000;
+	height: 1em; overflow:hidden; //anithong onside, hidden
+	transition:height 1s;
+}
+    nav:hover { height:3em; }
+
+nav a { 
+	display:inline-block;
+    background:rgba(203,203,203,0.7);
+    padding:.5em 10px;
+    margin:2px 0;
+    color:#333;
+    font-weight:bold;
+    text-decoration:none;
+    border:none;
+    border-radius:25px;
+	transition-property:width, height, transform, background, font-size, opacity;
+	transition-duration:1s, 1s, 1s, 5s, 1s, 1s;
+}
+
+/*
+pseudo clases
+nav a:link
+nav a:visited
+nav a:hover
+nav a:active
+
+*/
+
+/*
+class= "clearfix"
+.clearfix{}
+*/
+    nav a:hover { 
+		background: none repeat scroll 0% 0% rgb(30, 199, 230);
+        background:#f0f; 
+        color:white;
+		
+		transform:rotate(360deg);
+		opacity: 1;
+		width: 90px;
+		height: 60px;
+		font-size: 30px;
+    }
+
+
+	/*
+	media queries
+	
+	
+	*/
+/**
+* Typography
+*
+*/
+
+p {
+    line-height:1.5em;
+}
+
+
+
+
