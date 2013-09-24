@@ -1,0 +1,732 @@
+/* Theme Name: ricardov-v5-2013
+   Theme URL: http://www.ricardov.net/
+   Description: ricardov-4v-2011 basado en Blue Zinfandel 3-Column by Brian Gardner (http://www.briangardner.com).
+   Author: Ricardov based on the work of Brian Gardner
+   Author URI: http://ricardov.net Version: 4.0	
+   The CSS, XHTML and design is released under GPL:
+   http://www.opensource.org/licenses/gpl-license.php
+   Changelog: v1.0 - 04.20.13, First Release of ricardov-v5 */
+
+
+/* - - - -  M A I N  S T R U C T U R E  - - - - */
+body {
+font-family: georgia, times, serif;
+font-style:normal;
+font-weight:normal;
+font-size:100%;  /* 12px */
+padding:0em; /* 36px */
+margin:0px;
+}
+#wrapper {
+max-width: 980px;	
+margin: 0px auto 0px ; /* center x pos whole page*/
+padding: 0px;
+background: white;
+background: url("images/bg_grilla.png") repeat-y;
+overflow:hidden; /* Makes everything goes till the end */
+border-bottom:5px solid black;
+}
+#footer_main {  
+width: 960px;
+height:40px;
+margin:0px auto 0px;	
+padding: 10px;
+background:rgba(0,0,240,0.0); 
+float:none;
+}
+
+/* - - - -  H I D E   S H O W  - - - - */
+#show_hide_top p {
+width:100%;
+margin:0px auto 0;
+padding:4px 0px 2px 20px;
+line-height:1.4em;
+background:rgba(10, 10, 10, 0.8);
+font-size:0.7em; 
+}
+#show_hide_top a {
+color:white;
+}
+
+/* - - - -  A L L   H E A D E R S  - - - - */
+header {
+background: url(images/cabecera.png) top left no-repeat;
+width: 100%; /* width: auto; */
+height: 100px;
+position:relative;
+align:left;
+margin: 0px;
+padding:0px;/* pos del texto dl header*/
+text-align: left;
+text-transform: lowercase;
+border-bottom: 5px solid #000; 
+}
+#header a { /* titulo link en header */
+color: #0033FF;
+font-size: 13px;
+text-decoration: none;
+padding: 0px 0px 0px 0px;
+margin: 0px;
+text-transform: lowercase;
+}
+#header a:hover{
+text-decoration: none;
+}
+#header a:visited{
+text-decoration: none;
+}
+#header_top {
+	height: 100px; 	
+	padding:10px;
+	margin:0px;
+}
+/* - - - -  Tits header, name, description - - - - */
+#tits {
+width: auto;
+height: auto;
+margin: 30px 0px 0px 0px;
+padding: 5px 0px 0px 0px;/* pos del texto */
+}
+
+
+/* - - - -  N A V  M A I N  T O P - - - - */
+#nav_related, #nav_main { 
+max-width:980px;
+width:980px;
+height:20px;	
+position:relative;
+padding:0.0em;
+margin:0px;
+background:rgba(255, 255, 255, 0.0);
+font-size: 0.7em;
+}
+#nav_related {
+	align:right;
+width:980px;
+border-bottom:1px dotted black;
+}
+#nav_main {
+width:960px;
+bottom:0em;
+}
+#nav_related ul, #nav_related ul a, #nav_related ul li, 
+#nav_main ul, #nav_main ul a, #nav_main ul li 
+{ 
+position:relative;
+display:inline;
+padding: 5px 5px 5px 5px;
+color:#000;
+line-height:140%;
+list-style-type: none;
+}	
+#nav_main ul li a {
+letter-spacing: 1px;
+}
+#nav_main ul li a:hover {
+color:#00f;
+text-decoration: none;
+}
+
+/*                            
+#    #  ####  #    # ###### 
+#    # #    # ##  ## #      
+###### #    # # ## # #####  
+#    # #    # #    # #      
+#    # #    # #    # #      
+#    #  ####  #    # ###### 
+*/
+
+/* -- H O M E  C O V E R S -- */
+#section_covers { 
+display:none;  /*remove this before pubhis to test javascrtipt code*/
+max-width: 100%;	
+height: 900px; /* 100%*/	
+margin: 0px; /* center x pos whole page*/
+padding: 0px;
+background: SaddleBrown url("images/cover01.jpg") no-repeat;
+overflow:hidden; /* Makes everything goes till the end */
+border:0px solid black;
+}
+#img_cover {
+margin:0px auto 0px;
+width:100%;
+height:100%;
+align:middle;
+}
+#x {
+	margin:0px auto 0px;
+	
+}
+
+
+/* -- H O M E  S E C T I O N  S T R U C T U R E -- */
+#section_home { 
+float:inline;
+width: 100%;
+min-height:100%;
+margin:10px 0px 10px 0px; /* All sections */ 
+padding:0px 10px 0px 10px;
+float:left;
+background:rgba(240,250, 0,0.0);
+}
+
+/* -- H O M E  G A L L E R Y  S T R U C T U R E -- */
+#article_gallery_home { 
+	max-width: 100%; /* Why collapse when put width in px? */
+	margin:0px 20px 20px 0px; /* clockwise: top right bottom left */ 
+	padding:0px; 
+    background:rgba(0,240, 0,0.0);
+	float:left;
+	border-bottom:5px solid black;
+}
+#summary_gallery_home {
+	max-width: 48%; /* Why collapse when put width in px? */
+	min-width: 48%; /* Why collapse when put width in px? */
+	min-height: 40px;	margin:0px 0px 10px 0px; /* clockwise: top right bottom left */ 
+	padding:9px;
+	float:left;
+	background: rgba(200, 200, 0, 0.0);
+}
+
+
+/*                                               
+# #    # ##### ###### # #####  #  ####  #####  
+# ##   #   #   #      # #    # # #    # #    # 
+# # #  #   #   #####  # #    # # #    # #    # 
+# #  # #   #   #      # #####  # #    # #####  
+# #   ##   #   #      # #   #  # #    # #   #  
+# #    #   #   ###### # #    # #  ####  #    # 
+*/
+#section_interior { 
+float:inline;
+width: 100%;
+min-height:100%;
+margin:10px 0px 10px 0px; /* All sections */ 
+padding:0px 10px 0px 10px;
+float:left;
+background:rgba(0,0,240,0.0);
+}
+	#article_interior { 
+		max-width: 71.3%; /* Why collapse when put width in px? */
+		margin:0px 20px 0px 0px; /* clockwise: top right bottom left */ 
+		padding:0px; 
+	    background:rgba(0,240, 0,0.0);
+		float:right;
+	}
+	#summary_interior {
+		max-width: 31.5%; /* Why collapse when put width in px? */
+		min-width: 31.5%; /* Why collapse when put width in px? */
+		min-height: 40px;	margin:0px; /* clockwise: top right bottom left */ 
+		padding:0px;
+		float:left;
+		background: orange;
+		border-right:1px dotted black;
+	}
+	#details_interior {
+		max-width: 65.6%; /* Why collapse when put width in px? */
+		margin:0px; /* clockwise: top right bottom left */ 
+		padding:0px;
+		background: orange;
+		float:right;
+	}
+	#aside_interior { /* All asides */ 
+	    min-width:24.5%;
+	    margin: 0px;
+	    padding:0px; /* clockwise: top right bottom left */
+	    background:rgba(0,240, 0,0.0);
+		float:left;
+		border-right: 1px dotted black;
+		overflow:hidden;
+	}
+	#nav_aside_interior { 
+		width:92%;
+		height:100%;
+		top:0px;
+		margin: 0px 10px 0px 10px;
+		padding:0px; /* clockwise: top right bottom left */
+		background:yellow;
+		float:left;
+	}
+	#nav_aside_interior ul, #nav_aside_interior ul a, #nav_aside_interior ul li { 
+		display:block;
+		width: 100%;
+	    background:rgba(200,200,0,0.7);
+	    padding:.0em;
+	    margin:2px 0;
+	    color:#333;
+	    font-size: 0.8em;
+	}
+#section_interior img {
+	    margin:0px;
+	    border:0px;
+	    width:100%; /* set width on containing element */
+	    height:100%; /* set width on containing element */
+	    padding:0px;
+	    background:white;
+	}
+
+	
+/******* Navbar2 y 3 ************************************************/
+#navbar2 {
+	width: 600px;
+	float: left;	
+	padding: 5px 0px 5px 5px;
+	text-align: left;
+	margin: 10px 0px 10px 0px;
+position:absolute;
+z-index:2;
+	}
+
+#navbar3 {
+	width: 300px;
+	float: right;	
+	padding: 5px 0px 5px 5px;
+	text-align: left;
+	margin: 20px 0px 10px 0px;
+	}
+
+#navbar2 li, #navbar3 li {
+	display: inline;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	}
+		
+#navbar2 ul, #navbar3 ul {
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#navbar2 ul li a, #navbar3 ul li a  {
+	font-size: 11px;
+        letter-spacing: 1px;
+	padding: 5px 5px 5px 5px;
+	margin: 0px;
+	text-decoration: none;
+	text-transform: upperercase;
+	}
+
+#navbar2 ul li a:hover, #navbar3 ul li a:hover {
+        text-decoration: none;
+	}
+
+
+/******* Sidebar1 ************************************************/
+#sidebar1 {
+	float: left;
+	width: 130px;
+	margin: 0px 20px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	display: inline;
+        clear: none;
+	}
+	
+#sidebar1 ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px; /*separacion del costado*/
+	}
+	
+#sidebar1 li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px; 
+	}
+	
+#sidebar1 ul li {
+	margin: 0px 0px 0px 0px;
+	padding: 2px 0px 5px 0px; /*separacion de arriba*/
+	}
+	
+#sidebar1 ul li a {
+	color: #909090;
+	text-decoration: none;
+	padding: 0px 0px 0px 5px; /*separacion desde el borde*/
+	}
+
+#sidebar1 ul li a:hover {
+	text-decoration: none;
+	}
+	
+/******* Right Sidebar ************************************************/
+	
+#sidebar2, #sidebar2 {
+	float: left;
+/*bg    background: #ff3f33;  */
+	width: 130px;
+	margin: 0px 20px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	display: inline;
+	}
+
+#sidebar2 p, #sidebar3 p{
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+	line-height: 15px;
+	}
+
+#sidebar2 ul, #sidebar3 ul  {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px; /*separacion del costado*/
+	}
+	
+#sidebar2 ul li, #sidebar3 ul li {
+	margin: 0px 0px 0px 0px;
+	padding: 5px 0px 0px 0px; /*separacion de arriba*/
+        }
+	
+#sidebar2 ul li a, #sidebar3 ul li a {
+	text-decoration: none;
+	padding: 0px 0px 0px 5px; /*separacion desde el borde*/
+	}
+
+#sidebar2 ul li a:hover, #sidebar3 ul li a:hover {
+	text-decoration: none;
+	}
+
+#announcement {
+    width: 130px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	float: left;
+	margin: 0px auto 0px;
+	font-size: 11px;
+	font-family: Helvetica, Verdana, Arial, Sans-Serif;
+	font-weight: normal;
+	line-height: 15px;
+	border-top: 1px dotted #FF6600; 
+	border-bottom: 1px dotted #FF6600;
+	}
+
+/******* Content ************************************************/
+
+#content { /*caja central de contenidos*/
+	width: 980px;
+/*bg background: url(images/bgcenter.gif) top center repeat-y;*/	
+	float: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	}
+
+#content p { /* propiedades del txt de los post */
+        width: 550px; /* ancho cajas de texto */
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 5px 0px;
+	line-height: 16px;
+        letter-spacing: 0,6em;
+	}
+	
+#content p img{
+	float: center;
+	border: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	}
+
+#content a  {
+	text-decoration: none;
+	}
+
+#content a:hover {
+	text-decoration: none;
+	}
+
+#content h1 { /* titulos de los post background: url(images/flecha02.gif) center no-repeat; */
+        clear: both;
+        font-size: 13px;
+        font-family: Georgia, Times New Roman, Serif;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-transform: capitalize;
+        padding: 8px 0px 8px 0px;
+        height: 10px;
+	margin: 0px 0px 10px 0px;
+	border-bottom: 1px dotted #404040; 
+	}
+
+#contenthome h1 { /* titulo separador en home */
+	padding-top: 50px;
+        font-size: 13px;
+	}
+
+#content h1 a {
+	text-decoration: none;
+	}
+
+#content h1 a:hover {
+	text-decoration: none;
+	}
+	
+#content h2 { /* titulos del sidebar  background: url(images/flecha.gif) center no-repeat; */
+        width: 130px;
+        height: 13px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        padding: 6px 0px 6px 0px;
+        margin:  0px 0px 5px 0px;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, Serif;
+	font-weight: Bold;
+	border-bottom: 1px dotted #404040; 
+	}
+	
+blockquote{
+	margin: 0px 0px 15px 0px;
+	padding: 10px 5px 10px 5px;
+	background: #f0f0f0;
+	border: none;
+	}
+	
+#content blockquote p{
+        clear: none;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	display: inline;
+	}
+
+#contentpost {/*caja central de los contenidos, aca van los post y esas cosas*/
+	float: left;
+	background: #FFFFFF; /*bg post ex FBFBFB */ 
+	width: 230px;
+	margin: 0px 10px 10px 0px;
+	padding: 1px; /* caja de los contenidos del home */ 
+	display: inline;
+	}
+
+#contentpost h1 { /* titulos del sidebar  background: url(images/flecha.gif) center no-repeat; */
+        width: auto;
+        height: 5px;
+	font-size: 11px;
+	font-family: Georgia, Times New Roman, Serif;
+	font-weight: Bold;
+	color: #909090;
+        text-transform: capitalize;
+        padding: 5px 5px 0px 5px;
+	border-bottom: 0px;
+ 	}
+
+#contentmiddle {/*caja central de los contenidos, aca van los post y esas cosas*/
+	float: left;
+/*bg    background: #ffff33;*/ 
+	width: 650px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 0px 10px 0px;
+	 /* background: #F0F0F0; bg color bg caja central*/ 
+	display: inline;
+	}
+	
+#contentmiddle p img{ /* imagen post, propiedades */
+	float: center;
+        clear: none;
+	border-style: solid;
+	border-color: #FFFFFF;
+	border-width: 0px;
+	margin: 100px 0px 10px 0px;
+	}
+	
+#contentmiddle ol{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 10px 0px;
+	}
+	
+#contentmiddle ol li{
+	margin: 0px 0px 0px 20px;
+	padding: 0px 0px 5px 0px;
+	}
+	
+#contentmiddle ul{
+	list-style-type: square;
+	margin: 0px 0px 0px 20px;
+	padding: 0px 0px 10px 0px;
+	}
+
+#contentmiddle ul li{
+	list-style-type: square;
+	margin: 0px 0px 0px 20px;
+	padding: 0px 0px 5px 0px;
+	}
+	
+.contenttitle {/* caja de las fecha y tit del post */
+        margin-bottom: 5px; /* espacio de la caja de las fecha a la foto */
+	}
+
+#content img.wp-smiley {
+	float: none;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	}
+
+#content img.wp-wink {
+	float: none;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	}
+
+/* Es la separacion e los post. lo anule porque los titulos tienen lineas y cajas*/
+.postspace {
+        width: 250px;
+	background: url(images/cont_spacer.gif); 
+        float: left;	
+	padding: 5px 0px 5px 0px;
+	margin: 0px 0px 20px 0px;
+	}	
+
+
+/******* Search Form ************************************************/
+#searchdiv {
+	margin: 0px;
+	padding 0px;
+	}
+#searchform {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	}
+#s {
+	width: 120px;
+	background: #EFEFEF url(images/search.gif);
+	color: #333333;
+	font-size: 11px;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	padding: 3px;
+	margin: 6px 0px 0px 0px;
+	border: 1px solid #202020;
+	}
+
+/******* Comments ************************************************/
+	
+#commentblock {
+	width: 500px;
+	background: #2a2a2a;
+	color: #909090;
+	float: left;
+	padding: 5px 15px 5px 15px;
+	margin: 0px 0px 0px 0px;
+	}
+	
+#commentblock ol{
+	list-style-type: square;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 5px 0px;
+	}
+	
+.commentdate {
+	font-size: 12px;
+	padding-left: 0px;
+	}
+	
+#commentlist li p{
+	margin-bottom: 5px;
+	line-height: 10px;
+	padding: 0px;
+	}
+
+.commentname {
+	color: #909090;
+	margin: 0px;
+	padding: 5px 5px 5px 0px;
+	}
+
+.commentinfo{
+	clear: both;
+	}
+
+.commenttext { /* cajita de los ya comentados*/
+	clear: both;
+        border: 1px solid #F0F0F0;
+	margin: 3px 0px 3px 0px;
+        padding: 3px;
+	width: 95%;
+	background: #202020;
+	}
+
+.commenttext-admin {
+	clear: both;
+	margin: 5px 0px 5px 0px;
+	padding: 5px 5px 5px 5px;
+	width: 500px;
+	background: #FFFF33 url(images/comment.gif) no-repeat top;
+	}
+
+#commentsformheader{
+	padding-left: 0px;
+	}
+
+#commentsform{
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	}
+
+#commentsform form{
+	text-align: left;
+	margin: 0px;
+	}
+
+#commentsform p{
+	margin: 0px;
+padding: 5px;
+	}
+
+#commentsform form textarea {
+	width: 90%;
+	}
+	
+p.comments_link  img{
+	margin: 0px;
+	padding: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	}
+	
+	
+/* T Y P O S Hyperlinks ************************************************/
+
+	/* H1 H2 H3 P   - por ver*/ 
+h1, h2, h3 { 
+	font-family: 'Cantarell';
+    font-size: 16px;
+	border-bottom:1px dotted black;
+      }
+h2 {
+	font-size: 12px;
+	color:blue;
+	}
+h3 {
+	font-size: 12px;
+	}	
+	a, a:visited{
+		clear:none;
+		color: #0033FF;
+		text-decoration: none;
+		}
+	a:hover{
+		color: #0000FF;
+	        text-decoration: none;
+		}
+
+
+/* - - - -  S I R V E N  - - - - */
+#linea { /* por ver */
+width: auto;	
+height: 1px;
+margin: 10px 0px 20px 0px;
+padding: 0px;
+border-bottom: 4px solid #505050;
+}
+	
+/* por ver ****** Hyperlinks ************************************************/
+
+	/*body a {
+	    color: grey;
+		text-decoration:none;
+		font-family: 'Cantarell';
+	}
+	*/
+
+	
