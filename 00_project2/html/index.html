@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html> 
 
-
 <head>
 	<link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
     
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>	
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	
 	
 </head>
 
 
 <body>
+
+
+<!-- OBJECT W PAGE TO PREVIEW 
+<object data="http://www.ergocomics.cl" width="100%" height="600px">     <embed wmode="transparent" src="http://www.ergocomics
+	.cl" width="100%" height="600px" /> Error: Embedded data could not be displayed. </object>
+-->
+
 	<header><!-- selection elements-->	
 		<h1>WebProtest 0.1</h1>
-		<p>1- Choose the images most you like | 2-White your message | 3- Get the code to embed in your site! | 4- Go to the street too! </p>
+		<p>1- Choose the images you most like | 2- White your message | 3- Preview & Get the code to embed in your site! | 4- Go to the street too!</p>
+
 		<hr>
 
 	   <!-- -->
@@ -47,15 +57,19 @@
 		    <option value="Protester3">Protester3</option> 
 		   </select>			
 			
+   		<hr>
 			
 			<!-- M E S S A G E -->
             <form id="message">
-                <label for="message">Write your Message</label>
-                <input id="inputmessage" name="message" 					placeholder="writeyourmessagehere">
+                <label for="message">Write your Message (100 ch max)</label>
+                <input id="inputmessage" name="message" placeholder="writeyourmessagehere">
                 
                 <button id="buttonplace">Place Message</button>
 			</form>
-			    <button id="clearAll">Clear All</button>
+			<!-- CLEAR  BUTTON    <button id="clearAll">Clear All</button> -->
+			    <a id="preview" href="#"> Preview </a>
+
+		<hr>
  
 		</nav>
 
@@ -74,11 +88,11 @@
 
 					<section id="protesters">
 						
-						<article id="animated1"> <img src="img/protester_1.gif"></img></article> 
-						<article id="animated2"> <img src="img/protester_2.gif"></img></article> 
-						<article id="animated3"> <img src="img/protester_1.gif"></img></article> 
-						<article id="animated4"> <img src="img/protester_2.gif"></img></article> 
-						
+						<article id="animated1" class="drag"> <img src="img/protester_1.gif"></img></article> 
+						<article id="animated2" class="drag"> <img src="img/protester_2.gif"></img></article> 
+						<article id="animated3" class="drag"> <img src="img/protester_1.gif"></img></article> 
+						<article id="animated4" class="drag"> <img src="img/protester_2.gif"></img></article> 
+							
 					</section><!-- protesters text ends-->
 					 
 				</section> <!-- people ends-->
@@ -95,7 +109,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>	
+
 
 </body>
 

@@ -19,8 +19,8 @@ $(document).ready(function() {
 
 });
 
-
-//R - SELECT IMAGE FROM COMBO - - - - - - - - - - - - - - - - - - - - - - - - //
+//REVISAR///
+//R - S E L E C T   I M G   F R O M   C O M B O - - - - - - - - - - - - - - - - - - - - - - - - //
 
 $( "select" ).change(function () {
 	var str = "";
@@ -46,24 +46,41 @@ $( "select" ).change(function () {
 .change();
 
 
-//R - C L E A R - - - - - - - - - - - - - - - - - - - - - - - - //
 
-$('#clearAll').click(function() {
-//	 e.preventDefault();
-localStorage.clear();	
-location.reload();
+//R - D R A G - - - - - - - - - - - - - - - - - - - - - - - - //
+$(function() {
+	$( ".drag" ).draggable({axis:"x"});
 });
 
 
-//R - L O A D   I M G  - - - - - - - - - - - - - - - - - - - - - - - - //
-$('#imgs button').click( function(event){
-    // stop form from trying to send & refresh page
-    event.preventDefault();
-    // create post from form
-    var postimg = {};
-	var imgurl = '<img src="img/apple.jpg">Apple</img>';
- $('#feed').append(imgurl);
+//R - C L E A R  localstorage - - - - - - - - - - - - - - - - - - - - - - - - //
+// $('#clearAll').click(function() {
+// //	 e.preventDefault();
+// localStorage.clear();	
+// location.reload();
+// });
+
+
+
+//R - O P E N   P E V I E W   P A G E - - - - - - - - - - - - - - - - - - - - - - - - //
+$('#preview').click(function() {
+   window.open('http://www.example.com','mywindow','width=400,height=200')
+
 });
+
+
+
+
+
+//R - L O A D   I M G - - - - - - - - - - - - - - - - - - - - - - - - //
+// $('#imgs button').click( function(event){
+//     // stop form from trying to send & refresh page
+//     event.preventDefault();
+//     // create post from form
+//     var postimg = {};
+// 	var imgurl = '<img src="img/apple.jpg">Apple</img>';
+//  $('#feed').append(imgurl);
+// });
 
 
 //R - T O G G L E   I M G - - - - - - - - - - - - - - - - - - - - - - - - //
