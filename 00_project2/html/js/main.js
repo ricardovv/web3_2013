@@ -19,8 +19,10 @@ $(document).ready(function() {
 
 });
 
-//REVISAR///
-//R - S E L E C T   I M G   F R O M   C O M B O - - - - - - - - - - - - - - - - - - - - - - - - //
+
+
+
+//R - S E L E C T   I M G   F R O M   C O M B O 1  - - - - - - - - - - - - - - - - - - - - - - - - //
 
 $( "select" ).change(function () {
 	var str = "";
@@ -47,10 +49,13 @@ $( "select" ).change(function () {
 
 
 
+
 //R - D R A G - - - - - - - - - - - - - - - - - - - - - - - - //
 $(function() {
 	$( ".drag" ).draggable({axis:"x"});
 });
+
+
 
 
 //R - C L E A R  localstorage - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -62,13 +67,72 @@ $(function() {
 
 
 
-//R - O P E N   P E V I E W   P A G E - - - - - - - - - - - - - - - - - - - - - - - - //
-$('#preview').click(function() {
-   window.open('http://www.example.com','mywindow','width=400,height=200')
+//R - U S E R   W E B S I T E  - - - - - - - - - - - - - - - - - - - - - - - - //
+// ok, pass vaues from field to test div.
+$(document).ready(function() {
+
+	$("#userweb").click(function(event){
+		event.preventDefault();
+		
+		var webusertext = $('input').val(); //get text value from website input	
+		$('#test').text(webusertext);
+	}); 
 
 });
 
 
+
+//R - O P E N   P E V I E W   P A G E - - - - - - - - - - - - - - - - - - - - - - - - //
+// A - works js how to add address
+// function open_win(){
+// 	window.open('http://www.example.com','mywindow','scrollbars=yes, resizable=no, width=800, height=600')
+// 
+// }
+
+// B - THIS WORKS FINE!
+// $(document).ready(function(){
+// //    $('.newWindow').click(function (event){ //old butotn link 
+//     $('.preview').click(function (event){
+// //        var url = $(this).attr("href"); //gets url from clicked link. 
+//         var url = "http://www.elmostrador.cl"; //gets url from clicked link. 
+//         var windowName = "THIS IS A PREVIEW";
+//         var windowSize = "width=200,height=200";
+//         window.open(url, windowName, windowSize);
+//         event.preventDefault();
+//     });
+// });
+
+// C- works better...
+// $('.preview').click(function(e){
+// 	window.open('http://www.elmostrador.cl','Continue_to_Application','resize=yes, width=800,height=600');
+// 	e.preventDefault();
+// 	return false;
+// })
+
+// D - USED TO PRINT 
+// Working, but I need to open w the content, js, css & html
+// function printClick(){
+// 	var w = window.open();
+// 	var myhtml = $("#wrapper").html();
+// 	//write html to new window
+// 	$(w.document.body).html(myhtml);
+// }
+// 
+// $(function(){
+// 	$("a#print").click(printClick);
+// });
+
+// E - USED TO TEST VALUE PASSED FORM WEB FIELD 
+function printClick(){
+	var myhtml = $("#userweb input").html();
+	var w = window.open(myhtml);
+	//write html to new window
+	$(w.document.body).html(myhtml);
+}
+
+$(function(){
+	$("a#print").click(printClick);
+});
 
 
 

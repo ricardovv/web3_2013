@@ -22,13 +22,15 @@
 -->
 
 	<header><!-- selection elements-->	
-		<h1>WebProtest 0.1</h1>
-		<p>1- Choose the images you most like | 2- White your message | 3- Preview & Get the code to embed in your site! | 4- Go to the street too!</p>
+		<h1>WebProtest 0.1  | </h1>
+		<p>1- Choose the images you most like | 2- White your message in the flag | 3- Preview and Get the code to embed in your site! | 4- Go to the street too!</p>
 
 		<hr>
 
 	   <!-- -->
 		<nav>
+		 <p>Select backgrounds, people, protesters (and arrange it)  |  </p>
+			
  		   <!-- L A N D S C A P E S -->
 		    <select id="selectlandscape" name="selectlandscapes">
 		     <option value="landscape1">Landscape1</option>
@@ -61,14 +63,30 @@
 			
 			<!-- M E S S A G E -->
             <form id="message">
-                <label for="message">Write your Message (100 ch max)</label>
+                <label for="message">Write your Message (100 ch max):</label>
                 <input id="inputmessage" name="message" placeholder="writeyourmessagehere">
                 
-                <button id="buttonplace">Place Message</button>
+                <button id="buttonplace">Place Message in the flag:</button>
 			</form>
 			<!-- CLEAR  BUTTON    <button id="clearAll">Clear All</button> -->
-			    <a id="preview" href="#"> Preview </a>
 
+		<hr>
+			 <!-- <p>Preview in your website <input type="button" value="Preview in your site" onclick="open_win()">  |  </p> -->
+			 <p >Preview in your website 	 
+
+	 			<!-- U S E R   W E B S I T E -->
+	             <form id="userweb">
+	                 <label for="userweb">Your website (use http://www.yoursite.com):</label>
+	                 <input id="inputuserweb" name="inputuserweb" placeholder="write your website here">
+                
+	                 <button class="userweb" id="buttonuserweb">Preview:</button>
+	 			</form>
+
+			 <!-- <a href="#" rel="0" class="preview" >click me</a>
+			 |  </p> -->
+				 <a href="#" id="print">||| Print |||</a>
+				   
+			 <!-- <p>Get Code to paste in your website<a id="getcode" href="#"> Here... </a></p> -->
 		<hr>
  
 		</nav>
