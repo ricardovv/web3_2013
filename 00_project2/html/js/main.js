@@ -1,3 +1,16 @@
+/* OPTIONS
++ To preview icons pon list, it is possible?
+http://craigsworks.com/projects/qtip/demos/content/thumbnail
+
+http://www.codeproject.com/Questions/559452/loadplushtmlpluspageplusinplusdivplustagplususingp
+
+http://javascript.info/tutorial/cross-window-messaging-with-postmessage
++ mesage up to 100 words, see script to limit words
++ or connected w twitter. 
+
+- conditionals for IE in sme cases?
+
+*/
 
 //R - M E S S A G E   F L A G - - - - - - - - - - - - - - - - - - - - - - - - //
 
@@ -20,29 +33,86 @@ $(document).ready(function() {
 });
 
 
-
-
 //R - S E L E C T   I M G   F R O M   C O M B O 1  - - - - - - - - - - - - - - - - - - - - - - - - //
 
 $( "select" ).change(function () {
 	var str = "";
-	$( "#selectlandscape option:selected" ).each(function() {
-	str += $( this ).text() + " ";
-	});
-	$( "#test" ).text( str );
+	
+	$( "select option:selected" ).each(function() {
+	 str += $( this ).text() + " "; 
+ 	});
+	
+	//	$( "#test" ).text( str );
 
-	if($("select").val() == "landscape1"){
-//		$("#test").css('background', 'yellow');
+	//LANDSCAPE
+	if($("#selectlandscape").val() == "landscape1"){
 		$("#landscape").css('background', 'Url(img/landscape_1.gif)'); 
 	}
-	if($("select").val() == "landscape2"){
-//		$("#test").css('background', 'red');
+	if($("#selectlandscape").val() == "landscape2"){
 		$("#landscape").css('background', 'Url(img/landscape_2.gif)'); 
 	}
-	if($("select").val() == "landscape3"){
-//		$("#test").css('background', 'brown');
+	if($("#selectlandscape").val() == "landscape3"){
 		$("#landscape").css('background', 'Url(img/landscape_3.gif)'); 
 	}
+	if($("#selectlandscape").val() == "landscape0"){
+		$("#landscape").css('background', 'Url()'); 
+	}
+
+
+	//PEOPLE
+	if($("#selectpeople").val() == "people1"){
+		$("#people").css('background', 'Url(img/people_1.gif) center'); 
+	}
+	if($("#selectpeople").val() == "people2"){
+		$("#people").css('background', 'Url(img/people_2.gif) center'); 
+	}
+	if($("#selectpeople").val() == "people0"){
+		$("#people").css('background', 'Url()'); 
+	}
+	
+
+	//CARTEL
+	if($("#selectcartel").val() == "cartel1"){
+		$("#cartel").css('background', 'Url(img/cartel_1.gif)  no-repeat center'); 
+	}
+	if($("#selectcartel").val() == "cartel2"){
+		$("#cartel").css('background', 'Url(img/cartel_2.gif)  no-repeat center'); 
+	}
+
+	//PROTESTER A
+	if($("#selectprotester_a").val() == "protester_a1"){
+		$("#protester_a img").attr('src','img/protester_a1.gif');
+	}
+	if($("#selectprotester_a").val() == "protester_a2"){
+		$("#protester_a img").attr('src','img/protester_a2.gif');
+	}
+	if($("#selectprotester_a").val() == "protester_a3"){
+		$("#protester_a img").attr('src','img/protester_a3.gif');
+	}
+
+
+	//PROTESTER B
+	if($("#selectprotester_b").val() == "protester_b1"){
+		$("#protester_b img").attr('src','img/protester_b1.gif');
+	}
+	if($("#selectprotester_b").val() == "protester_b2"){
+		$("#protester_b img").attr('src','img/protester_b2.gif');
+	}
+	if($("#selectprotester_b").val() == "protester_b3"){
+		$("#protester_b img").attr('src','img/protester_b1.gif');
+	}
+
+	//PROTESTER C
+	if($("#selectprotester_c").val() == "protester_c1"){
+		$("#protester_c img").attr('src','img/protester_c1.gif');
+	}
+	if($("#selectprotester_c").val() == "protester_c2"){
+		$("#protester_c img").attr('src','img/protester_c2.gif');
+	}
+	if($("#selectprotester_c").val() == "protester_c3"){
+		$("#protester_c img").attr('src','img/protester_c3.gif');
+	}
+
 	
 })
 .change();
@@ -56,14 +126,6 @@ $(function() {
 });
 
 
-
-
-//R - C L E A R  localstorage - - - - - - - - - - - - - - - - - - - - - - - - //
-// $('#clearAll').click(function() {
-// //	 e.preventDefault();
-// localStorage.clear();	
-// location.reload();
-// });
 
 
 
@@ -81,8 +143,53 @@ $(document).ready(function() {
 });
 
 
+//R - C L E A R  localstorage - - - - - - - - - - - - - - - - - - - - - - - - //
+// $('#clearAll').click(function() {
+// //	 e.preventDefault();
+// localStorage.clear();	
+// location.reload();
+// });
+
+
 
 //R - O P E N   P E V I E W   P A G E - - - - - - - - - - - - - - - - - - - - - - - - //
+//from http://jsfiddle.net/zCdrn/1/
+// opens new window w css styles
+
+function printWindow(){
+	var printWindow = window.open("", "Print", "status=no, toolbar=no, scrollbars=yes", "false" );
+
+		// $("link, style, script").each(function() {
+		// 	$(printWindow.document.head).append($(this).clone())
+		// });
+
+	var toInsert = $("html #wrapper").html();
+	$(printWindow.document.body).append(toInsert);
+}
+
+$(function(){
+	$("button#buttonpreview").click(printWindow);
+});
+
+
+
+//WORKS OPENING NEW WINDOW W SELECTED DIV
+// function nWin(){
+// 	var w = window.open();
+// 	var myhtml = $('html #wrapper').html();
+// 	//write html to new window
+// 	$(w.document.body).html(myhtml);
+// }
+// 
+// $(function(){
+// 	$("button#buttonpreview").click(nWin);
+// });
+
+
+//TUTORIALS TO SE
+//PRINT
+// http://www.bennadel.com/blog/1591-Ask-Ben-Print-Part-Of-A-Web-Page-With-jQuery.htm
+
 // A - works js how to add address
 // function open_win(){
 // 	window.open('http://www.example.com','mywindow','scrollbars=yes, resizable=no, width=800, height=600')

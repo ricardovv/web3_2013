@@ -3,7 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
+    <link rel="stylesheet" type="text/css" href="/Users/ricardov/Desktop/_NY_2013/_Parsons/_Parsons_3/3_Web3/assignments/00_project2/html/css/style.css"> </link>
     
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -15,8 +15,8 @@
 
 <body>
 
-
-<!-- OBJECT W PAGE TO PREVIEW 
+<!-- 
+ OBJECT W PAGE TO PREVIEW 
 <object data="http://www.ergocomics.cl" width="100%" height="600px">     <embed wmode="transparent" src="http://www.ergocomics
 	.cl" width="100%" height="600px" /> Error: Embedded data could not be displayed. </object>
 -->
@@ -36,6 +36,7 @@
 		     <option value="landscape1">Landscape1</option>
 		     <option value="landscape2">Landscape2</option>
 		     <option value="landscape3">Landscape3</option>
+		     <option value="landscape0">Without Landscape</option>
 		   </select> 
 
 		   <!-- P E O P L E -->
@@ -43,6 +44,7 @@
 		     <option value="people1">People1</option>
 		     <option value="people2">People2</option>
 		     <option value="people3">People3</option>
+		     <option value="people0">Without People</option>
 		   </select> 
    
 		   <!-- C A R T E L -->
@@ -52,11 +54,25 @@
 		    <option value="cartel3">Cartel3</option>
 		   </select> 
 
-		   <!-- P R O T E S T E R -->
-		   <select id="selectprotester" name="selectprotester">
-		    <option value="Protester1">Protester1</option>
-		    <option value="Protester2">Protester2</option>
-		    <option value="Protester3">Protester3</option> 
+		   <!-- P R O T E S T E R  A -->
+		   <select id="selectprotester_a" name="selectprotester_a">
+		    <option value="protester_a1">Protester A 1</option>
+		    <option value="protester_a2">Protester A 2</option>
+		    <option value="protester_a3">Protester A 3</option> 
+		   </select>			
+
+		   <!-- P R O T E S T E R  B -->
+		   <select id="selectprotester_b" name="selectprotester_b">
+		    <option value="protester_b1">Protester B 1</option>
+		    <option value="protester_b2">Protester B 2</option>
+		    <option value="protester_b3">Protester B 3</option> 
+		   </select>			
+
+		   <!-- P R O T E S T E R  C -->
+		   <select id="selectprotester_c" name="selectprotester_c">
+		    <option value="protester_c1">Protester C 1</option>
+		    <option value="protester_c2">Protester C 2</option>
+		    <option value="protester_c3">Protester C 3</option> 
 		   </select>			
 			
    		<hr>
@@ -82,9 +98,9 @@
 	                 <button class="userweb" id="buttonuserweb">Preview:</button>
 	 			</form>
 
-			 <!-- <a href="#" rel="0" class="preview" >click me</a>
-			 |  </p> -->
-				 <a href="#" id="print">||| Print |||</a>
+			 <!-- <a href="#" rel="0" class="preview" >click me</a> -->
+             <button id="buttonpreview">PREVIEW THE PAGE:</button>
+
 				   
 			 <!-- <p>Get Code to paste in your website<a id="getcode" href="#"> Here... </a></p> -->
 		<hr>
@@ -92,8 +108,7 @@
 		</nav>
 
 	</header>
-	<!-- T E S T   G O   H O M E  -->
-	<div id="test">test</div>
+	
 	
 	<div id="wrapper">
 		
@@ -106,10 +121,10 @@
 
 					<section id="protesters">
 						
-						<article id="animated1" class="drag"> <img src="img/protester_1.gif"></img></article> 
-						<article id="animated2" class="drag"> <img src="img/protester_2.gif"></img></article> 
-						<article id="animated3" class="drag"> <img src="img/protester_1.gif"></img></article> 
-						<article id="animated4" class="drag"> <img src="img/protester_2.gif"></img></article> 
+						<article id="protester_a" class="drag"> <img src="img/protester_a1.gif"></img></article> 
+						<article id="protester_b" class="drag"> <img src="img/protester_b1.gif"></img></article> 
+						<article id="protester_c" class="drag"> <img src="img/protester_c1.gif"></img></article> 
+						<article id="protester_d" class="drag"> <img src="img/protester_d1.gif"></img></article> 
 							
 					</section><!-- protesters text ends-->
 					 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+	<link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
+    
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>	
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	
+	
+</head>
+
+
+<body>
+
+<!-- 
+ OBJECT W PAGE TO PREVIEW 
+<object data="http://www.ergocomics.cl" width="100%" height="600px">     <embed wmode="transparent" src="http://www.ergocomics
+	.cl" width="100%" height="600px" /> Error: Embedded data could not be displayed. </object>
+-->
+
+	<header><!-- selection elements-->	
+		<h1>WebProtest 0.1  | </h1>
+		<p>1- Choose the images you most like | 2- White your message in the flag | 3- Preview and Get the code to embed in your site! | 4- Go to the street too!</p>
+
+		<hr>
+
+	   <!-- -->
+		<nav>
+		 <p>Select backgrounds, people, protesters (and arrange it)  |  </p>
+			
+ 		   <!-- L A N D S C A P E S -->
+		    <select id="selectlandscape" name="selectlandscapes">
+		     <option value="landscape1">Landscape1</option>
+		     <option value="landscape2">Landscape2</option>
+		     <option value="landscape3">Landscape3</option>
+		     <option value="landscape0">Without Landscape</option>
+		   </select> 
+
+		   <!-- P E O P L E -->
+		   <select id="selectpeople" name="selectpeople">
+		     <option value="people1">People1</option>
+		     <option value="people2">People2</option>
+		     <option value="people3">People3</option>
+		     <option value="people0">Without People</option>
+		   </select> 
+   
+		   <!-- C A R T E L -->
+		   <select id="selectcartel" name="selectcartel">
+		    <option value="cartel1">Cartel1</option>
+		    <option value="cartel2">Cartel2</option>
+		    <option value="cartel3">Cartel3</option>
+		   </select> 
+
+		   <!-- P R O T E S T E R  A -->
+		   <select id="selectprotester_a" name="selectprotester_a">
+		    <option value="protester_a1">Protester A 1</option>
+		    <option value="protester_a2">Protester A 2</option>
+		    <option value="protester_a3">Protester A 3</option> 
+		   </select>			
+
+		   <!-- P R O T E S T E R  B -->
+		   <select id="selectprotester_b" name="selectprotester_b">
+		    <option value="protester_b1">Protester B 1</option>
+		    <option value="protester_b2">Protester B 2</option>
+		    <option value="protester_b3">Protester B 3</option> 
+		   </select>			
+
+		   <!-- P R O T E S T E R  C -->
+		   <select id="selectprotester_c" name="selectprotester_c">
+		    <option value="protester_c1">Protester C 1</option>
+		    <option value="protester_c2">Protester C 2</option>
+		    <option value="protester_c3">Protester C 3</option> 
+		   </select>			
+			
+   		<hr>
+			
+			<!-- M E S S A G E -->
+            <form id="message">
+                <label for="message">Write your Message (100 ch max):</label>
+                <input id="inputmessage" name="message" placeholder="writeyourmessagehere">
+                
+                <button id="buttonplace">Place Message in the flag:</button>
+			</form>
+			<!-- CLEAR  BUTTON    <button id="clearAll">Clear All</button> -->
+
+		<hr>
+			 <!-- <p>Preview in your website <input type="button" value="Preview in your site" onclick="open_win()">  |  </p> -->
+			 <p >Preview in your website 	 
+
+	 			<!-- U S E R   W E B S I T E -->
+	             <form id="userweb">
+	                 <label for="userweb">Your website (use http://www.yoursite.com):</label>
+	                 <input id="inputuserweb" name="inputuserweb" placeholder="write your website here">
+                
+	                 <button class="userweb" id="buttonuserweb">Preview:</button>
+	 			</form>
+
+			 <!-- <a href="#" rel="0" class="preview" >click me</a> -->
+             <button id="buttonpreview">Preview:</button>
+
+				   
+			 <!-- <p>Get Code to paste in your website<a id="getcode" href="#"> Here... </a></p> -->
+		<hr>
+ 
+		</nav>
+
+	</header>
+	
+	
+	<div id="wrapper">
+		
+		<section id="landscape">
+			
+			<section id="cartel">
+			<h2>Este es el texto del cartel.</h2>  
+				
+				<section id="people">
+
+					<section id="protesters">
+						
+						<article id="protester_a" class="drag"> <img src="img/protester_a1.gif"></img></article> 
+						<article id="protester_b" class="drag"> <img src="img/protester_b1.gif"></img></article> 
+						<article id="protester_c" class="drag"> <img src="img/protester_c1.gif"></img></article> 
+						<article id="protester_d" class="drag"> <img src="img/protester_d1.gif"></img></article> 
+							
+					</section><!-- protesters text ends-->
+					 
+				</section> <!-- people ends-->
+
+			</section><!-- cartel close-->
+			
+		</section><!-- landscape ends-->
+
+
+
+	</div><!-- wrapper ends -->	
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+    <script src="js/main.js"></script>	
+
+
+</body>
+
+</html>
+
+	

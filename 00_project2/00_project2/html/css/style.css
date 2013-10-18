@@ -1,0 +1,159 @@
+/* CSS */
+
+body {
+	font-size:100%;
+	margin:0px;
+	padding:0px;
+	font-family: Georgia, Times, Serif;
+	color:white;
+	font-size:100%;	
+}	
+
+/* - T O P - - - - - - - - - - - - - - - - - - - - */
+#wrapper {
+	width:100%;
+	height:250px;
+	position:absolute;
+	bottom:0px;
+}
+header {
+	width:100%;
+	background:SlateBlue;
+	position:absolute;
+	top:0px;
+}
+header h1 {
+	width:100px;
+	font-size:0.7em;
+	margin:1px 4px 1px 4px;
+	display:inline;
+}
+hr {
+	border:1px dotted grey;
+    border-style:none none dotted;
+	margin:2px 0px 2px 0px;
+}
+header p {
+	display:inline;
+	font-size:0.65em;
+	margin:1px;
+}
+nav {
+	font-size:0.65em;
+	margin:2px;	
+}
+nav p {
+	display:inline;
+	font-size:1.0em;
+	margin:1px;
+}
+
+/* - B O T T O M - - - - - - - - - - - - - - - - - - - - */
+#test {
+background: yellow;
+color:black;	
+
+}
+
+section {
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	height:250px;
+	margin:0px;
+}
+#landscape {
+	background: url('../img/landscape_1.gif'); 
+	border: 0px solid blue;
+}
+
+#cartel {
+	background: url('../img/cartel_1.gif') no-repeat center;
+}
+#cartel h1, #cartel h2 {
+	position:relative;
+	width:300px;
+	top:15%;
+	margin:auto;
+	background:rgba(200, 200, 0, 0.4); 
+	font-size:1.0em;
+	font-family:Courier, Georgia, Times, Serif;
+	text-align:center;
+	color:black;
+	
+}
+#people {
+	background:white;
+	border:0px solid yellow;
+	background: url('../img/people_1.gif');
+}
+#people h1 {
+	font-size:1em;
+	text-align:left;
+}
+#protesters {
+	height:150px;/* height of protesters box */
+/*	background: rgba(200, 200, 0, .2); */
+}
+article {
+	width:20%;
+	max-width:150px;
+	height:150px;
+	display:inline-block;
+/*	background: rgba(200, 0, 0, .2); */
+	border:1px solid white;
+	margin:0px;
+}
+#protester_a {
+}
+#protester_b {
+}
+#protester_c {
+	float:right;
+}
+#protester_d {
+	float:right;
+}
+.draggable { 
+/*	width: 20px; 
+	height: 20px; 
+	padding: 0.5em;
+	*/ 
+	border:1px solid black; 
+}
+
+img {
+	bottom:0px;
+/*	height:100%; */
+	width:150px;
+	height :150px;
+	margin:0px;
+	padding:0px;
+	border:0px solid coral;
+}
+
+/* - F O R M - - - - - - - - - - - - - - - - - - - - */
+form { 
+	margin-bottom:2px; 
+	display:inline;
+}
+
+input, textarea { 
+    display:inline; 
+    margin:.2em 0; 
+    width:30%;
+    border:1px solid #ccc;
+    box-shadow:none;
+    border-radius:3px;
+    padding:.25em;
+}
+
+textarea { 
+    height:50px;
+    resize: vertical; 
+    }
+
+button {
+    margin:.5em 0 0 auto;
+    
+}

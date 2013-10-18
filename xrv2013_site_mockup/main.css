@@ -1,0 +1,255 @@
+/* * CSS * cascade & specificity: 
+* http://reference.sitepoint.com/css/specificity
+*/
+/* P R O B L E M S 
+- position of header. 
+*/
+/* -- M A I N  S T R U C T U R E -- */
+body { 
+	font-family: georgia, times, serif;
+	font-style:normal;
+	font-weight:normal;
+    font-size:100%;  /* 12px */
+	padding:0em; /* 36px */
+	margin:0px;
+}
+#wrapper {
+	max-width: 980px;	
+	margin: 20px auto 0px ; /* center x pos whole page*/
+	padding: 0px;
+	background: white url("img/bg_grilla.png") repeat-y;
+	overflow:hidden; /* Makes everything goes till the end */
+	border-bottom:5px solid black;
+}
+header { /* All the headers */
+	width: 100%;
+	margin:0px;	
+    position:relative;
+	border-bottom: 5px solid black;
+ }
+#header_top {
+	height: 100px; 	
+	padding:10px;
+    background:rgba(0,0,240,0.3) url('img/cabecera.png') no-repeat top left 20px;
+}
+footer {  
+	width: 960px;
+	height:40px;
+	margin:0px 0px 20px 0px;	
+	padding: 10px;
+    background:rgba(0,0,240,0.3);
+	float:left;
+ }
+
+
+/* -- N A V  M A I N  T O P -- */
+#nav_main, #nav_related { 
+    max-width:980px;
+    width:980px;
+    top:0em;
+	background:#444;
+	height:20px;	
+	font-size: 0.5em;
+    padding:0.1em;
+	position:absolute;
+	}
+#nav_main ul, #nav_top ul a, #nav_top ul li 
+#nav_related ul, #nav_related ul a, #nav_related ul li 
+{ 
+    position:relative;
+	display:inline;
+    color:#aaa;
+	line-height:150%;
+}
+
+/* -- H O M E  C O V E R S -- */
+#section_covers { 
+	display:none;
+	max-width: 100%;	
+	height: 100%;	
+	margin: 0px; /* center x pos whole page*/
+	padding: 0px;
+	background: SaddleBrown  ;
+	overflow:hidden; /* Makes everything goes till the end */
+	border: 10px solid black;
+	}
+
+
+/* -- H O M E  S E C T I O N  S T R U C T U R E -- */
+#section_home { 
+	float:inline;
+	width: 100%;
+	min-height:100%;
+    margin:20px 0px 10px 0px; /* All sections */ 
+    padding:10px 10px 0px 10px;
+	float:left;
+    background:rgba(240,0, 0,0.3);
+	border-bottom: 5px solid black;
+	}
+
+/* -- H O M E  G A L L E R Y  S T R U C T U R E -- */
+#article_gallery_home { 
+	max-width: 100%; /* Why collapse when put width in px? */
+	margin:0px 20px 20px 0px; /* clockwise: top right bottom left */ 
+	padding:0px; 
+    background:rgba(0,240, 0,0.3);
+	float:left;
+	border-bottom:1px dotted black;
+}
+#summary_gallery_home {
+	max-width: 50%; /* Why collapse when put width in px? */
+	min-width: 50%; /* Why collapse when put width in px? */
+	min-height: 40px;	margin:0px 0px 10px 0px; /* clockwise: top right bottom left */ 
+	padding:0px;
+	float:left;
+	background: orange;
+}
+
+/* -- H O M E  A R T I C L E  S T R U C T U R E -- */
+#article_home { 
+	max-width: 22.45%; /* Why collapse when put width in px? */
+	margin:0px 10px 10px 10px; /* clockwise: top right bottom left */ 
+	padding:0px; 
+    background:rgba(0,240, 0,0.3);
+	float:left;
+	border-bottom:1px dotted black;
+}
+#summary_home {
+	max-width: 50%; /* Why collapse when put width in px? */
+	min-width: 50%; /* Why collapse when put width in px? */
+	min-height: 40px;	margin:0px 0px 20px 0px; /* clockwise: top right bottom left */ 
+	padding:0px;
+	float:left;
+	background: orange;
+}
+
+
+
+
+
+/* O K */
+/* -- I N T E R I O R  C E N T R A L  S T R U C T U R E -- */
+#section_interior { 
+	display:none;
+	float:inline;
+	width: 100%;
+	min-height:100%;
+    margin:20px 0px 10px 0px; /* All sections */ 
+    padding:0px 10px 0px 10px ;
+	float:left;
+    background:rgba(0,0,240,0.3);
+	}
+#article_interior { 
+	max-width: 71.3%; /* Why collapse when put width in px? */
+	margin:0px 30px 0px 0px; /* clockwise: top right bottom left */ 
+	padding:0px; 
+    background:rgba(0,240, 0,0.3);
+	float:right;
+}
+#summary_interior {
+	max-width: 31.5%; /* Why collapse when put width in px? */
+	min-width: 31.5%; /* Why collapse when put width in px? */
+	min-height: 40px;	margin:0px; /* clockwise: top right bottom left */ 
+	padding:0px;
+	float:left;
+	background: orange;
+	border-right:1px dotted black;
+}
+#details_interior {
+	max-width: 65.6%; /* Why collapse when put width in px? */
+	margin:0px; /* clockwise: top right bottom left */ 
+	padding:0px;
+	background: orange;
+	float:right;
+}
+#aside_interior { /* All asides */ 
+    min-width:24.5%;
+    margin: 0px;
+    padding:0px; /* clockwise: top right bottom left */
+    background:rgba(0,240, 0,0.3);
+	float:left;
+	border-right: 1px dotted red;
+	overflow:hidden;
+}
+#nav_aside_interior { 
+	width:92%;
+	height:100%;
+	top:0px;
+	margin: 0px 10px 0px 10px;
+	padding:0px; /* clockwise: top right bottom left */
+	background:yellow;
+	float:left;
+}
+#nav_aside_interior ul, #nav_aside_interior ul a, #nav_aside_interior ul li { 
+	display:block;
+	width: 100%;
+    background:rgba(200,200,0,0.7);
+    padding:.0em;
+    margin:2px 0;
+    color:#333;
+    font-size: 0.8em;
+}
+
+
+
+
+
+/* -- M A I N  T Y P O S -- */
+
+header, section, aside, summary, details, h1, p, a:link, ol, ul {
+	color: black;
+	font-weight:normal;
+}	
+header h1 {
+    padding:0px;
+    font-size:0.5em; 
+    }
+
+section h1, article h1, footer h1 {
+    margin:0px 0px 10px 0px ; 
+	font-size: 0.8em;
+}
+p {
+	margin:0px;
+	padding:5px 0px 2px 5px;
+    line-height:1.3em;
+	background:gray;
+    font-size:0.5em; 
+	}
+#section_covers p {
+		margin: 0px;
+	    line-height:1.3em;
+		background:white;
+	}
+#show_hide_top p {
+	margin:0px;
+	line-height:1.5em;
+	background:lightBlue;
+}
+
+
+
+
+/* -- R E S P O N S I V E --*/
+    
+/*class="clearfix"*/
+/*.clearfix {} */
+@media only screen and (min-width: 320px) { body { color:rgba(0,0,0,1.0); background:rgba(255,255,255,1.0); } }
+@media only screen and (min-width: 480px) { body { color:rgba(0,0,0,1.0); background:rgba(255,255,255,1.0); } }
+@media only screen and (min-width: 720px) { body { font-size:150%; color:rgba(0,0,0,1.0); background:rgba(255,255,255,1.0); } }
+
+
+img	 {
+    margin:0px;
+    border:0px;
+    max-width:100%; /* set width on containing element */
+    padding:0px;
+    background:white;
+}
+#img_cover {
+	width:100%;
+	height:100%;
+}
+
+
+

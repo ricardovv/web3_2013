@@ -1,0 +1,152 @@
+<!-- P R O B L E M S -->
+<!-- 1- wrapper doesn't wrap until the end! cna I use overflow:hidden? -->
+<!-- 2- When resize to smaller size, section runs below the aside -->
+<!-- 3- Aside doesn't run until the end -->
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>rv2013 &mdash; v1</title>
+        <link rel="stylesheet" href="normalize.min.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+<body>        
+
+
+<!--  S H O W   H I D E   C O N T E N T   --> 
+		<div id="show_hide_top">
+		<a href="javascript:hide_covers('')"><p id="onoff_covers">[Go to WebSite...]</p></a> <!-- Show or hide covers --> 
+		</div>
+
+<!--  C O V E R S  --> 
+		<div id="section_covers">
+		<section id="covers_content">
+			<div id="x"> <img src="img/cover01.jpg" alt="cover01"> </div>	
+			<p>Recent Projects: Geometric Poster</p>
+		</section>
+		</div>
+		
+
+<!--  W R A P P E R  --> 
+		<div id="wrapper">
+
+<!--  N A V - R E L A T E D  --> 
+		<nav id="nav_related">
+		<ul>
+			<li><a href="#nowhere" title="Lorum ipsum dolor sit amet">NavTop-1</a></li>
+			<li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">NavTop-2</a></li>
+			<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">NavTop-3</a></li>
+		</ul>
+		</nav>
+
+<!--  H E A D E R  M A I N  --> 
+        <header id="header_top">
+            <h1><a href="#nowhere" title="Lorum ipsum dolor sit amet">Header h1 - ricardov 2013 - Interior</h1></a>
+            <nav id="nav_main">
+	            <ul>
+	            <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">NavMain-1</a></li>
+                <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">NavMain-2</a></li>
+            	<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">NavMain-3</a></li> 
+				</ul>
+			</nav>
+		</header>
+
+
+
+
+<!--  H O M E - - - - S E C T I O N  -->     
+<section id="section_home">
+	<a href="javascript:hide_featured('')"><p id="onoff_featured">[hide featured]</p></a> <!-- Show or hide --> 
+
+
+<!--  A R T I C L E - G A L L E R Y  -->         
+	<article id="article_gallery_home">
+		<!--  S U M A R Y  - S E C T I O N  -->         
+		<!-- 
+		<summary id="summary_gallery_home">
+			<p>senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, ultricies eget, tempor pharetra.</p>
+		</summary>
+		-->
+	</article>    
+
+
+
+<!--  H O M E - - - - A R T I C L E S  -->     
+	<!--  A R T I C L E - S E C T I O N  -->         
+	<article id="article_home">
+        <h1>H1 - Title of Article Home</h1>
+		<!--  I M G - S E C T I O N  -->         
+        <div id="img_home"> <img id="img" src="img/img.jpg" alt="img"> </div>
+		<!--  S U M A R Y  - S E C T I O N  -->         
+		<summary id="summary_articl_home">
+			<p>senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, ultricies eget, tempor pharetra.</p>
+		</summary>
+	</article>    
+
+
+</section>
+
+
+
+<!--  I N T E R I O R - - - - S E C T I O N  -->     
+<section id="section_interior">
+    <header id="header_interior"><h1>H1 - Title of section</h1></header>
+	
+	<!--  N A V - S E C T I O N  -->     
+	<aside id="aside_interior">
+		<nav id="nav_aside_interior">
+        <ul>
+        <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">NavSection-1</a></li>
+        <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">NavSection-2</a></li>
+    	<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">NavSection-3</a></li>
+    	<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">NavSection-4</a></li>
+    	<li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">NavSection-5</a></li>
+	    </ul>
+		<nav>
+    </aside>
+	
+	<!--  A R T I C L E - S E C T I O N  -->         
+	<article id="article_interior">
+        <h1>H1 - Title of Article</h1>
+		
+		<!--  I M G - S E C T I O N  -->         
+        <div id="img_interior"> <img id="img" src="img/img.jpg" alt="img"> </div>
+		
+		<!--  S U M A R Y  - S E C T I O N  -->         
+		<summary id="summary_interior">
+			<p>Sumary Section Element</p>
+		</summary>
+		
+		<!--  D E T A I L S - S E C T I O N  -->    
+		<details id="details_interior">
+			<p>senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor pharetra.</p>
+		</details>
+
+	</article>                
+</section>
+
+
+
+<!-- - - - - F O O T E R - - - - -->         
+<footer id="footer_main">
+	<h1>Footer</h1>
+		<p>turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor pharetra.</p>
+</footer>
+
+
+<!--  W R A P P E R  E N D S  --> 
+</div>
+
+
+
+<!--  S C R T I P T  --> 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+        <script src="js/vega.js"></script>
+
+
+</body>
+</html>
