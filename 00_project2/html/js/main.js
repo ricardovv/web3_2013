@@ -9,22 +9,22 @@ http://javascript.info/tutorial/cross-window-messaging-with-postmessage
 + or connected w twitter. 
 
 - conditionals for IE in sme cases?
++ salvar datos php
+http://lia.unet.edu.ve/Dai/EjemplosJS/Almacen.html
+
+- Embed code
+http://www.siegemedia.com/embed-code-generator
+
 
 */
 
-//R - M E S S A G E   F L A G - - - - - - - - - - - - - - - - - - - - - - - - //
 
+//R - M E S S A G E   F L A G - - - - - - - - - - - - - - - - - - - - - - - - //
 $(document).ready(function() {
 
 	$("#message button").click(function(event){
 		//  $('#cartel', 'h1').html("<b>Appended text</b>");
 		event.preventDefault();
-
-		// var newtext = $('p').val();	
-		//  var newtext = ("<b>Appended text</b>");
-		// $('#cartel h2').html("<b>Appended text</b>");
-		//var newtext = $("header h1").text(); //selects the text	
-		//$('#cartel h2').text("<h2>" + newtext + "</h2>");
 
 		var newtext = $('input').val(); //get text value from input	
 		$('#cartel h2').text("!" + newtext + "!");
@@ -33,15 +33,14 @@ $(document).ready(function() {
 });
 
 
-//R - S E L E C T   I M G   F R O M   C O M B O 1  - - - - - - - - - - - - - - - - - - - - - - - - //
 
+//R - S E L E C T   I M G   F R O M   C O M B O 1  - - - - - - - - - - - - - - - - - - - - - - - - //
 $( "select" ).change(function () {
 	var str = "";
 	
 	$( "select option:selected" ).each(function() {
 	 str += $( this ).text() + " "; 
- 	});
-	
+ 	});	
 	//	$( "#test" ).text( str );
 
 	//LANDSCAPE
@@ -119,70 +118,121 @@ $( "select" ).change(function () {
 
 
 
-
 //R - D R A G - - - - - - - - - - - - - - - - - - - - - - - - //
-$(function() {
-	$( ".drag" ).draggable({axis:"x"});
-});
+//$(function() {
+//	$( ".drag" ).draggable({axis:"x"});
+//});
 
 
 
 
 
-//R - U S E R   W E B S I T E  - - - - - - - - - - - - - - - - - - - - - - - - //
-// ok, pass vaues from field to test div.
+//R - V A R I O U S   B U T T O N S por ver...  - - - - - - - - - - - - - - - - - - - - - - - - //
+
 $(document).ready(function() {
-
+	
+	//R - U S E R   W E B S I T E  O N B G - - - - - - - - - - - - - - - - - - - - - - - - //	
+	// example - www.codingforums.com/showthread.php?t=246606
 	$("#userweb").click(function(event){
-		event.preventDefault();
-		
-		var webusertext = $('input').val(); //get text value from website input	
+		event.preventDefault();	
+		var webusertext = $('#inputuserweb').val(); //get text value from website input	
+//		$('#test').text(webusertext);
+		$('body #bgweb').attr({
+			    "data" : webusertext,
+				"src" : webusertext
+			  });
 		$('#test').text(webusertext);
+	}); 
+
+
+
+	//R - M E S S A G E  T O  O V E R L A Y | working - - - - - - - - - - - - - - - - - - - - - - - - //
+	$("#getcodebutton").click(function(event){
+		var theurl =  '<iframe src="http://ricardov.cl/p/protest/preview.html" width="100%" height="250" frameborder="0" scrolling="no" hspace="10" vspace="5" style="position:fixed; bottom:0; border-style:none; width:100%; left:0; right:0; height:250px;"></iframe>';
+
+	    var theurl2 = '  hola  ';
+		$('#box h2').text(	theurl	);
+
+		$(".overlay").css('display', 'block'); 
+	}); 
+
+
+	//R - C L O S E  O V E R L A Y | working - - - - - - - - - - - - - - - - - - - - - - - - //
+	$(".overlay #close").click(function(event){
+		event.preventDefault();
+		$(".overlay").css('display', 'none'); 
 	}); 
 
 });
 
 
-//R - C L E A R  localstorage - - - - - - - - - - - - - - - - - - - - - - - - //
-// $('#clearAll').click(function() {
-// //	 e.preventDefault();
-// localStorage.clear();	
-// location.reload();
+
+
+
+//R -  S H O W | H I D E  H E A D E R  - - - - - - - - - - - - - - - - - - - - - - - - //
+function hide_covers(id){
+	var	theheader = document.getElementById('top'); 
+	var message_out = document.getElementById('onoff_covers');
+
+	if ( theheader.style.display != 'none' ) {
+		theheader.style.display = 'none';
+		message_out.innerHTML = '[ Show ]';
+	}
+	else {
+		theheader.style.display = 'block';
+		message_out.innerHTML = '[ Hide ]';
+	}
+}
+
+
+
+
+
+//R - M E S S A G E  T O  O V E R L A Y | working - - - - - - - - - - - - - - - - - - - - - - - - //
+// $(document).ready(function() {
+// 	$("#getcodebutton").click(function(event){
+// 		event.preventDefault();
+// 		var theurl =  '<iframe src="preview.html" width="100%" height="250" frameborder="0" scrolling="no" hspace="10" vspace="5" style="position:absolute; bottom:0px; border-style:none; width:100%; height:250px;"></iframe>';
+// 	    var theurl2 = '  hola  ';
+// 		$('#box h2').text(	theurl	);
+
+// 		$(".overlay").css('display', 'block'); 
+// 	}); 
+
 // });
 
 
 
-//R - O P E N   P E V I E W   P A G E - - - - - - - - - - - - - - - - - - - - - - - - //
-//from http://jsfiddle.net/zCdrn/1/
-// opens new window w css styles
-
-function printWindow(){
-	var printWindow = window.open("", "Print", "status=no, toolbar=no, scrollbars=yes", "false" );
-
-		// $("link, style, script").each(function() {
-		// 	$(printWindow.document.head).append($(this).clone())
-		// });
-
-	var toInsert = $("html #wrapper").html();
-	$(printWindow.document.body).append(toInsert);
-}
-
-$(function(){
-	$("button#buttonpreview").click(printWindow);
-});
 
 
-
-//WORKS OPENING NEW WINDOW W SELECTED DIV
 // function nWin(){
-// 	var w = window.open();
+// 	var wFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes, width=200, height=200";
+// 	var w = window.open(["", "CopyCode", wFeatures);
 // 	var myhtml = $('html #wrapper').html();
 // 	//write html to new window
 // 	$(w.document.body).html(myhtml);
 // }
 // 
 // $(function(){
-// 	$("button#buttonpreview").click(nWin);
+// 	$("button#getcodebutton").click(nWin);
+// });
+
+
+
+// BEtter paste web behind?
+//from http://jsfiddle.net/zCdrn/1/
+// opens new window w css styles
+
+// function printWindow(){ 
+// 	var printWindow = window.open("", "Print", "status=no, toolbar=no, scrollbars=yes", "false" );
+// 		$("link, style, script").each(function() {
+// 			$(printWindow.document.head).prepend($(this).clone())
+// 		});
+// 	var toInsert = $("html").html();
+// 	$(printWindow.document.body).append(toInsert);
+//  } 
+// $(function(){
+// 	$("button#buttonpreview").click(printWindow);
 // });
 
 
@@ -241,6 +291,13 @@ $(function(){
 	$("a#print").click(printClick);
 });
 
+
+//R - C L E A R  localstorage - - - - - - - - - - - - - - - - - - - - - - - - //
+// $('#clearAll').click(function() {
+// //	 e.preventDefault();
+// localStorage.clear();	
+// location.reload();
+// });
 
 
 //R - L O A D   I M G - - - - - - - - - - - - - - - - - - - - - - - - //

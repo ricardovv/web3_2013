@@ -3,7 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="/Users/ricardov/Desktop/_NY_2013/_Parsons/_Parsons_3/3_Web3/assignments/00_project2/html/css/style.css"> </link>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
     
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -15,21 +15,18 @@
 
 <body>
 
-<!-- 
- OBJECT W PAGE TO PREVIEW 
-<object data="http://www.ergocomics.cl" width="100%" height="600px">     <embed wmode="transparent" src="http://www.ergocomics
-	.cl" width="100%" height="600px" /> Error: Embedded data could not be displayed. </object>
--->
+<!--  OBJECT W PAGE TO PREVIEW -->
+<object id="bgweb" data="xxx" width="100%" height="600px"> <embed wmode="transparent" src="" width="100%" height="600px" /> Error: Embedded data could not be displayed. </object>
 
-	<header><!-- selection elements-->	
+
+	<header id="top"><!-- selection elements-->	
 		<h1>WebProtest 0.1  | </h1>
-		<p>1- Choose the images you most like | 2- White your message in the flag | 3- Preview and Get the code to embed in your site! | 4- Go to the street too!</p>
-
+		<p>Cerate your own manifestation and pasteir in your site!. Go to the street too!  |  More info here.</p>
 		<hr>
 
 	   <!-- -->
 		<nav>
-		 <p>Select backgrounds, people, protesters (and arrange it)  |  </p>
+		 <p>1- Select backgrounds, people, protesters |  </p>
 			
  		   <!-- L A N D S C A P E S -->
 		    <select id="selectlandscape" name="selectlandscapes">
@@ -79,38 +76,50 @@
 			
 			<!-- M E S S A G E -->
             <form id="message">
-                <label for="message">Write your Message (100 ch max):</label>
-                <input id="inputmessage" name="message" placeholder="writeyourmessagehere">
+                <label for="message">2- White your message in the flag (100 ch max):</label>
+                <input id="inputmessage" type="text" name="message" placeholder="writeyourmessagehere" size="10">
                 
-                <button id="buttonplace">Place Message in the flag:</button>
+                <button id="buttonplace" class="mybuttons">Place Message in the flag:</button>
 			</form>
 			<!-- CLEAR  BUTTON    <button id="clearAll">Clear All</button> -->
 
-		<hr>
-			 <!-- <p>Preview in your website <input type="button" value="Preview in your site" onclick="open_win()">  |  </p> -->
-			 <p >Preview in your website 	 
+	
+ 			<!-- U S E R   W E B S I T E -->
+ 			<!-- 
+	   	<hr>
+	        <form id="userweb">
+                 <label for="userweb">3- Preview in your website (http://www.yoursite.com):</label>
+                 <input id="inputuserweb" type="text" name="inputuserweb" size="30" placeholder="write your website here">
+            
+                 <button id="userwebbutton" class="mybuttons">Preview!!!</button>
+ 			</form>
+			-->
 
-	 			<!-- U S E R   W E B S I T E -->
-	             <form id="userweb">
-	                 <label for="userweb">Your website (use http://www.yoursite.com):</label>
-	                 <input id="inputuserweb" name="inputuserweb" placeholder="write your website here">
-                
-	                 <button class="userweb" id="buttonuserweb">Preview:</button>
-	 			</form>
-
-			 <!-- <a href="#" rel="0" class="preview" >click me</a> -->
-             <button id="buttonpreview">PREVIEW THE PAGE:</button>
-
+ 			<!-- B U T T O N   G E T   C O D E  -->
+			<button id="getcodebutton"  class="mybuttons">GET CODE!!!</button>
 				   
-			 <!-- <p>Get Code to paste in your website<a id="getcode" href="#"> Here... </a></p> -->
-		<hr>
+			<!-- 
+			<hr>
+			-->
+		
  
 		</nav>
 
 	</header>
+
+	<div id="show_hide_top">
+		<a href="javascript:hide_covers('')" id="onoff_covers">[ Hide ]</a> 
+		<!-- Show or hide covers --> 
+	</div>
 	
+	//TEST TO GET CODE
+	<div id="test">Select and Copy Code:
+	<input id="code" value="SubmitValue">
+	<p></p>
+	</div>
 	
 	<div id="wrapper">
+		
 		
 		<section id="landscape">
 			
@@ -131,14 +140,32 @@
 				</section> <!-- people ends-->
 
 			</section><!-- cartel close-->
-			
+
+			<div id="ricardovlogo">
+
+			<a href="http://www.ricardov.cl" target="_blank"><img id="ricardovlogo" src="img/ricadov.png"></a></img>
+
+			</div>
+
 		</section><!-- landscape ends-->
 
 
 
 	</div><!-- wrapper ends -->	
 
+	<!-- G E T   C O D E  W I N D O W -->
+ 				<div class="overlay">
+		<div id="box">
+			<p>Copy the link and paste it into your website... : )</p>
+			<hr>
+			<h2></h2>
+			<hr>
+			<p id="close"> - Close - </p>
+		</div>
+	</div>
 
+
+	<!-- C A L L  S C R I P T S -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
@@ -149,4 +176,3 @@
 
 </html>
 
-	
