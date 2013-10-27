@@ -9,78 +9,90 @@ body {
 	font-size:100%;	
 }	
 
+a:link, a:hover, a:visited, a:active, #infobutton {
+	color:yellow;
+	text-decoration:none;
+}
+
 /* - T O P - - - - - - - - - - - - - - - - - - - - */
 #wrapper {
 	width:100%;
 	height:250px;
 	position:absolute;
-	bottom:0px;
+	bottom:-4px;
 }
 header {
 	display:block;
 	width:100%;
-	background:SlateBlue;
+	background:indigo;
 	position:absolute;
 	top:0px;
 }
 header h1 {
 	width:100px;
-	font-size:0.7em;
-	margin:1px 4px 1px 4px;
+	font-size:0.8em;
+	margin:5px;
 	display:inline;
+	color:OrangeRed;
 }
-hr {
-	border:1px dotted grey;
-    border-style:none none dotted;
-	margin:2px 0px 2px 0px;
-}
-header p {
+header p, select, input {
 	display:inline;
-	font-size:0.65em;
-	margin:1px;
+	margin:4px;
+	font-size:0.8em;
 }
 nav {
-	font-size:0.65em;
 	margin:2px;	
-}
-nav p {
-	display:inline;
-	font-size:1.0em;
-	margin:1px;
 }
 input[type="text"] {
 height: 10px;
 width: 200px;
 }
 input[id="inputmessage"] {
-width: 300px;
+width: 350px;
 }
+hr {
+	border:1px dotted grey;
+    border-style:none none dotted;
+	margin:2px 0px 2px 0px;
+}
+
+/* - F O R M S  - - - - - - - - - - - - - - - - - - - - */
 .mybuttons {
-	padding: 0px 5px 0px 5px !important;
-	margin: 0px 0px 0px 5px ;
-	font-size: 11px !important;
-	background-color:	MediumSpringGreen;
+	padding: 5px !important;
+	margin: 0px 5px 0px 5px ;
+	border:0px;
+	background-color:Lightblue;
 	font-weight: normal;
-	color: #2d525d;
+	font-size: 0.9em;
+	font-family: Georgia, Times, Serif;
+	color: indigo;
 }
 #getcodebutton {
 	float:right;
+ 	margin:0px 15px 0px 0px ;	
+}
+.myforms {
+	padding: 0px !important;
+	margin: 0px 2px 0px 5px ;
+	border:0px;
+	font-weight: normal;
+	font-size: 0.9em;
+	color: indigo;
 }
 
 #show_hide_top { /* Button to hide top navigation */
 	position:absolute;
 	top:0px;
 	right:0px;
-	width:40px;
+	width:42px;
 	height:18px;
- 	margin:0px 20px 0px 0px ;
-	padding:2px;
-	background:yellow;
-	font-size:0.6em;	
+ 	margin:0px 15px 0px 0px ;
+	padding:3px;
+	background:orangeRed;
 }
 
 /* - B O T T O M - - - - - - - - - - - - - - - - - - - - */
-#test {
+#test, #recibido {
 	display:block;
 	position:relative;
 	top:200px;
@@ -88,7 +100,7 @@ width: 300px;
 	color:black;	
 }
 #test p {
-	background: yellow;
+	background: brown;
 }
 
 section {
@@ -97,8 +109,9 @@ section {
 	width:100%;
 	height:250px;
 	margin:0px;
+	padding:0px;
 }
-#landscape {
+#bg {
 	background: url('../img/landscape_1.gif'); 
 	border: 0px solid blue;
 }
@@ -108,15 +121,15 @@ section {
 }
 #cartel h1, #cartel h2 {
 	position:relative;
-	width:300px;
-	top:15%;
+	width:360px;
+	top:6%;
 	margin:auto;
 	background:rgba(200, 200, 0, 0.4); 
 	font-size:1.0em;
 	font-family:Courier, Georgia, Times, Serif;
 	text-align:center;
 	color:black;
-	
+	vertical-align: center;	
 }
 #people {
 	background:white;
@@ -137,7 +150,7 @@ article {
 	height:150px;
 	display:inline-block;
 /*	background: rgba(200, 0, 0, .2); */
-	border:1px solid white;
+	border:0px solid white;
 	margin:0px;
 }
 #protester_a {
@@ -154,7 +167,7 @@ article {
 /*	width: 20px; 
 	height: 20px; 
 	padding: 0.5em;
-	*/ 
+*/	 
 	border:1px solid black; 
 }
 
@@ -180,8 +193,24 @@ img {
     z-index:2000;
 }
 
-.overlay #box {
-    display:block;
+#box{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin : 0 auto;
+    margin-top:150px;
+    width:500px;
+    height:175px;
+    border:10px solid black;
+    background:HoneyDew;
+    padding:5px;
+    color:black;
+    font-size:0.8em;
+}
+#info{
+    display:none;
     position:absolute;
     top:0;
     left:0;
@@ -189,7 +218,7 @@ img {
     margin : 0 auto;
     margin-top:150px;
     width:400px;
-    height:150px;
+    height:250px;
     border:10px solid black;
     background:HoneyDew;
     padding:5px;
@@ -206,12 +235,17 @@ img {
 	width: 90%;
     margin: 10px;
 }
+#box h2, #info h2 {
+	width:97%;
+	padding:4px;
+ 	font-size:1.0em;
+	text-align: center;
+}
 #box h2 {
 	background:white;
 	border:1px solid lightGrey;
- 	font-size:0.8em;
-	padding:5px;
 }
+
 #ricardovlogo, img #ricardovlogo {
 	position:absolute;
 	bottom:0px;
@@ -225,7 +259,6 @@ form {
 	margin-bottom:2px; 
 	display:inline;
 }
-
 input, textarea { 
     display:inline; 
     margin:.2em 0; 
@@ -235,14 +268,11 @@ input, textarea {
     border-radius:3px;
     padding:.25em;
 }
-
 textarea { 
     height:50px;
     resize: vertical; 
     }
-
 button {
     margin:.5em 0 0 auto;
-    
 }
 
