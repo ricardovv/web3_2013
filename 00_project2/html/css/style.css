@@ -1,9 +1,22 @@
 /* CSS */
+/* 
+Name: Web manifestation 0.1
+Author: Ricardo Vega Mora  
+Date: oct 2013
+About: Created as a homework for Web 3 Class at parsons The New School, NY., teacher Matthew Wilse. 
+More info: www.ricardov.cl  
+Creative Commons Licence. 
+
++ OPTIONS
++ mesage up to 100 words, see script to limit words
++ or connected w twitter. 
++ conditionals for IE in some cases?
+*/
 
 body {
-	font-size:100%;
 	margin:0px;
 	padding:0px;
+	font-family: 'Rambla', sans-serif;
 	font-family: Georgia, Times, Serif;
 	color:white;
 	font-size:100%;	
@@ -19,21 +32,33 @@ a:link, a:hover, a:visited, a:active, #infobutton {
 	width:100%;
 	height:250px;
 	position:absolute;
-	bottom:-4px;
+	bottom:0px;
 }
-header {
+#wrapper_top {
 	display:block;
 	width:100%;
-	background:indigo;
+	height:auto;
 	position:absolute;
 	top:0px;
 }
+
+header {
+	display:block;
+	width:100%;
+	background:MidnightBlue;
+	top:0px;
+	font-family: Rambla;
+	padding:15px 0px 5px 0px;
+}
 header h1 {
 	width:100px;
-	font-size:0.8em;
 	margin:5px;
 	display:inline;
-	color:OrangeRed;
+	color:orangered;
+	font-family: 'Kavoon', cursive;
+	font-weight:normal;
+	font-size:1.0em;
+	letter-spacing:1px;
 }
 header p, select, input {
 	display:inline;
@@ -41,7 +66,7 @@ header p, select, input {
 	font-size:0.8em;
 }
 nav {
-	margin:2px;	
+	margin:2px 2px 0px 2px;	
 }
 input[type="text"] {
 height: 10px;
@@ -53,7 +78,7 @@ width: 350px;
 hr {
 	border:1px dotted grey;
     border-style:none none dotted;
-	margin:2px 0px 2px 0px;
+	margin:4px 2px 4px 2px;
 }
 
 /* - F O R M S  - - - - - - - - - - - - - - - - - - - - */
@@ -62,34 +87,57 @@ hr {
 	margin: 0px 5px 0px 5px ;
 	border:0px;
 	background-color:Lightblue;
+	font-family: Rambla;
 	font-weight: normal;
 	font-size: 0.9em;
-	font-family: Georgia, Times, Serif;
 	color: indigo;
 }
 #getcodebutton {
-	float:right;
- 	margin:0px 15px 0px 0px ;	
+ 	margin:5px 15px 5px 5px;	
 }
 .myforms {
 	padding: 0px !important;
-	margin: 0px 2px 0px 5px ;
+	margin: 5px ;
 	border:0px;
+	font-family: Rambla;
 	font-weight: normal;
 	font-size: 0.9em;
 	color: indigo;
 }
 
 #show_hide_top { /* Button to hide top navigation */
-	position:absolute;
+	position:relative;
+	float:right;
 	top:0px;
 	right:0px;
-	width:42px;
-	height:18px;
+	width:30px;
+	height:35px;
  	margin:0px 15px 0px 0px ;
-	padding:3px;
-	background:orangeRed;
+	padding:0px;
 }
+form { 
+	display:inline;
+}
+input, textarea { 
+    display:inline; 
+    margin:.5em; 
+    width:30%;
+    border:1px solid #ccc;
+    box-shadow:none;
+    border-radius:3px;
+    padding:.5em;
+	background-color:lightgreen;
+	border-spacing: 0;
+	font-family: Rambla;
+}
+textarea { 
+    resize: vertical; 
+    }
+button {
+    margin:.5em 0 0 auto;
+}
+
+
 
 /* - B O T T O M - - - - - - - - - - - - - - - - - - - - */
 #test, #recibido {
@@ -124,10 +172,12 @@ section {
 	width:360px;
 	top:6%;
 	margin:auto;
-	background:rgba(200, 200, 0, 0.4); 
-	font-size:1.0em;
-	font-family:Courier, Georgia, Times, Serif;
+	background:rgba(200, 200, 0, 0.0); 
+	font-family:'Architects Daughter', cursive;
+	font-size:1.2em;
+	font-weight:normal;
 	text-align:center;
+	letter-spacing:0.08em;
 	color:black;
 	vertical-align: center;	
 }
@@ -142,14 +192,12 @@ section {
 }
 #protesters {
 	height:150px;/* height of protesters box */
-/*	background: rgba(200, 200, 0, .2); */
 }
 article {
 	width:20%;
 	max-width:150px;
 	height:150px;
 	display:inline-block;
-/*	background: rgba(200, 0, 0, .2); */
 	border:0px solid white;
 	margin:0px;
 }
@@ -164,14 +212,13 @@ article {
 	float:right;
 }
 .draggable { 
-/*	width: 20px; 
+	width: 20px; 
 	height: 20px; 
-	padding: 0.5em;
-*/	 
-	border:1px solid black; 
+	padding: 0.5em;	 
+	border:0px solid black; 
 }
 
-img {
+#protesters img {
 	bottom:0px;
 /*	height:100%; */
 	width:150px;
@@ -202,12 +249,13 @@ img {
     margin : 0 auto;
     margin-top:150px;
     width:500px;
-    height:175px;
+    height:225px;
     border:10px solid black;
     background:HoneyDew;
     padding:5px;
     color:black;
     font-size:0.8em;
+	font-family: Rambla;
 }
 #info{
     display:none;
@@ -218,18 +266,24 @@ img {
     margin : 0 auto;
     margin-top:150px;
     width:400px;
-    height:250px;
+    height:350px;
     border:10px solid black;
     background:HoneyDew;
     padding:5px;
     color:black;
     font-size:0.8em;
+	font-family: Rambla;
 }
 .overlay p {
     display:block;
     margin: 10px 10px;
     color:black;
     text-align: center;
+}
+.overlay a:link, .overlay a:hover, .overlay a:visited, .overlay a:active {
+    color:OrangeRed;
+    text-align: center;
+	text-decoration:none;
 }
 .overlay input {
 	width: 90%;
@@ -240,6 +294,8 @@ img {
 	padding:4px;
  	font-size:1.0em;
 	text-align: center;
+	font-weight:normal;
+
 }
 #box h2 {
 	background:white;
@@ -248,31 +304,10 @@ img {
 
 #ricardovlogo, img #ricardovlogo {
 	position:absolute;
-	bottom:0px;
-	right:0px;
- 	width:22px;  height:22px;
+	bottom:5px;
+	right:5px;
+ 	width:15px;  height:15px;
 }
 
 
-/* - F O R M - - - - - - - - - - - - - - - - - - - - */
-form { 
-	margin-bottom:2px; 
-	display:inline;
-}
-input, textarea { 
-    display:inline; 
-    margin:.2em 0; 
-    width:30%;
-    border:1px solid #ccc;
-    box-shadow:none;
-    border-radius:3px;
-    padding:.25em;
-}
-textarea { 
-    height:50px;
-    resize: vertical; 
-    }
-button {
-    margin:.5em 0 0 auto;
-}
 

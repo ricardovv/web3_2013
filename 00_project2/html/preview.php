@@ -4,6 +4,7 @@
 <head>
 	<link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
+	<link href='http://fonts.googleapis.com/css?family=Rambla:400,400italic,700,700italic|Lobster' rel='stylesheet' type='text/css'>    
     
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -23,13 +24,13 @@
 	
 	<div id="wrapper">
 		<?php  
-			$vl=$_GET['selectlandscapes'];
-			$vp=$_GET['selectpeople'];
-			$vc=$_GET['selectcartel'];
-			$vp_a=$_GET['selectprotester_a'];
-			$vp_b=$_GET['selectprotester_b'];
-			$vp_c=$_GET['selectprotester_c'];
-			$vp_d=$_GET['selectprotester_d'];
+			$vl=$_GET['selbg'];
+			$vp=$_GET['selpeople'];
+			$vc=$_GET['selcartel'];
+			$vp_a=$_GET['selprotester_a'];
+			$vp_b=$_GET['selprotester_b'];
+			$vp_c=$_GET['selprotester_c'];
+			$vp_d=$_GET['selprotester_d'];
 						
 			$ruta = "img/";
 			$vp_a_source = $ruta.$vp_a.".gif";
@@ -39,7 +40,7 @@
 		?>
 
 		
-		<section id="landscape">
+		<section id="bg">
 			
 			<section id="cartel">
  <!--			<h2><?php echo $rcartel; ?>  -->
